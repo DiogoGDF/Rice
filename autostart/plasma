@@ -1,0 +1,5 @@
+#!/bin/bash
+
+unclutter &
+/usr/bin/emacs --daemon & 
+dconf write /org/gnome/desktop/input-sources/xkb-options "['caps:swapescape']"

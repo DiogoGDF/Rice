@@ -1,0 +1,7 @@
+[Desktop Entry]
+Exec=/home/diogo/.config/autostart/plasma
+Icon=dialog-scripts
+Name=plasma
+Path=
+Type=Application
+X-KDE-AutostartScript=true
