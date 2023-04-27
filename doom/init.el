@@ -93,7 +93,7 @@
        (eval +overlay)     ; run code, run (also, repls)
        ;;gist              ; interacting with github gists
        lookup              ; navigate your code and its documentation
-       ;;lsp
+       lsp
        magit             ; a git porcelain for Emacs
        ;;make              ; run make tasks from Emacs
        ;;pass              ; password manager for nerds
@@ -136,7 +136,7 @@
        ;;(java +meghanada) ; the poster child for carpal tunnel syndrome
        javascript        ; all(hope(abandon(ye(who(enter(here))))))
        ;;julia             ; a better, faster MATLAB
-       ;;kotlin            ; a better, slicker Java(Script)
+       kotlin            ; a better, slicker Java(Script)
        latex            ; writing papers in Emacs has never been so fun
        ;;lean
        ;;factor
@@ -149,8 +149,7 @@
        (org
         +journal             ; enable org journal
         +pretty              ; replace asterisks with pretty org bullets
-        +publish             ; create static websites with org
-        +roam2)              ; org roam v2
+        +publish)             ; create static websites with org
        php               ; perl's insecure younger brother
        ;;plantuml          ; diagrams for confusing people more
        ;;purescript        ; javascript, but functional
