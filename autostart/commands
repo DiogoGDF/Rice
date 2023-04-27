@@ -1,0 +1,11 @@
+#!/bin/bash
+if xrandr | grep "HDMI1 connected"; then
+	xrandr --output HDMI1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output eDP1 --mode 1920x1080 --pos 0x1080 --rotate normal &
+fi
+unclutter &
+xmodmap ~/.Xmodmap &
+pkill -f "emacs --daemon"
+/usr/bin/emacs --daemon &
+xinput set-prop 12 "libinput Natural Scrolling Enabled" 1
+sleep 1
+leftwm command SoftReload
