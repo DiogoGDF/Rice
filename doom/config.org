@@ -61,6 +61,8 @@
 - [[#transparencia][Transparencia]]
 - [[#pdf][PDF]]
 - [[#dired-th][Dired TH]]
+- [[#brave-as-browser][Brave as browser]]
+- [[#cursor-speed-faster][cursor speed faster]]
 
 * ABOUT THIS CONFIG
 This is my personal Doom Emacs config.  Doom Emacs is a distribution of Emacs that uses the "evil" keybindings (Vim keybindings) and includes a number of nice extensions and a bit of configuration out of the box.  I am maintaining this config not just for myself, but also for those that want to explore some of what is possible with Emacs.  I will add a lot of examples of plugins and settings, some of them I may not even use personally.  I do this because many people following me on YouTube look at my configs as "documentation".
@@ -1253,3 +1255,19 @@ Isso serve pra eu conseguir esconder as hidden files do meu dired
 #+begin_src emacs-lisp
 (setq dired-omit-files "^\\.?#\\|^\\.$\\|^\\.\\.$\\|^\\..*$")
 #+end_src
+
+* Brave as browser
+
+#+begin_src emacs-lisp
+(setq browse-url-browser-function 'browse-url-generic
+      browse-url-generic-program "brave")
+;;(global-auto-revert-mode t)
+(after! company
+  (add-to-list 'company-backends 'company-web-html))
+#+end_src
+
+* cursor speed faster
+Não funcionou
+
+(setq repeat-delay 0.9)
+(setq repeat-interval 0.5)

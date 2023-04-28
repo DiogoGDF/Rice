@@ -688,3 +688,9 @@ List of keybindings (SPC h b b)")
 (add-hook 'pdf-view-mode-hook (lambda () (hide-mode-line-mode)))
 
 (setq dired-omit-files "^\\.?#\\|^\\.$\\|^\\.\\.$\\|^\\..*$")
+
+(setq browse-url-browser-function 'browse-url-generic
+      browse-url-generic-program "brave")
+;;(global-auto-revert-mode t)
+(after! company
+  (add-to-list 'company-backends 'company-web-html))
