@@ -57,6 +57,8 @@
         (command: Execute, value: "xfce4-terminal --drop-down", modifier: [], key: "F12"),
         (command: Execute, value: "killall conky", modifier: ["modkey", "Alt", "Shift"], key: "c"),
         (command: Execute, value: "emacsclient -c -a 'emacs'", modifier: ["modkey"], key: "e"),
+        (command: Execute, value: "brave", modifier: ["modkey"], key: "b"),
+        (command: Execute, value: "github-desktop", modifier: ["modkey"], key: "g"),
         (command: Execute, value: "dmenu_run -i -nb \'#191919\' -nf \'#fea63c\' -sb \'#fea63c\' -sf \'#191919\' -fn \'NotoMonoRegular:bold:pixelsize=14\'", modifier: ["modkey", "Shift"], key: "d"),
         (command: Execute, value: "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next", modifier: ["modkey"], key: "n"),
         (command: Execute, value: "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous", modifier: ["modkey", "Shift"], key: "n"),
