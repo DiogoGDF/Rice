@@ -9,27 +9,29 @@ fi
 ln -s $SCRIPTPATH/down /tmp/leftwm-theme-down
 
 # keybindings daemon
-#sxhkd -c ~/.config/leftwm/sxhkd/sxhkdrc &
+sxhkd -c ~/.config/leftwm/sxhkd/sxhkdrc &
 
 # diversity of apps to start
 nm-applet &
-#pamac-tray &
-#xfce4-power-manager &
+pamac-tray &
+xfce4-power-manager &
 numlockx on &
 blueberry-tray &
-#/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 #/usr/lib/xfce4/notifyd/xfce4-notifyd &
 volumeicon &
 dunst &
-autostart &
-wallpaper &
+#conky -c ~/.config/leftwm/system-overview &
+#nitrogen --restore &
 #caffeine &
+#vivaldi-stable &
 #firefox &
 #thunar &
 #dropbox &
 #insync start &
 #discord &
 #spotify &
+#atom &
 
 # Boot picom or compton if it exists
 if [ -x "$(command -v picom)" ]; then
@@ -45,9 +47,9 @@ fi
 leftwm command "LoadTheme $SCRIPTPATH/theme.ron"
 
 # Set background
-#if [ -x "$(command -v feh)" ]; then
-#  feh --bg-fill "$SCRIPTPATH"/background.jpg
-#fi
+if [ -x "$(command -v feh)" ]; then
+  feh --bg-fill "$SCRIPTPATH"/background.jpg
+fi
 
 #mainbar
 index=0
