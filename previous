@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# File to store the previous wallpaper paths
+previous_wallpaper_file="$HOME/Pictures/.wall_history"
+
+# Check if the previous wallpaper file exists
+if [[ -f "$previous_wallpaper_file" ]]; then
+    # Remove the last line from the file
+    sed -i '$ d' "$previous_wallpaper_file"
+
+    # Read the last line (previous wallpaper) from the file
+    previous_wallpaper=$(tail -n 1 "$previous_wallpaper_file")
+    echo "$previous_wallpaper"
+
+    # Set the previous wallpaper as the current wallpaper
+    feh --no-fehbg --bg-fill "$previous_wallpaper"
+fi
