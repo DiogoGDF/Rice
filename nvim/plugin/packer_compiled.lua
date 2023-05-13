@@ -79,10 +79,20 @@ _G.packer_plugins = {
     path = "/home/diogo/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ["auto-pairs"] = {
+    loaded = true,
+    path = "/home/diogo/.local/share/nvim/site/pack/packer/start/auto-pairs",
+    url = "https://github.com/jiangmiao/auto-pairs"
+  },
   ["cmp-nvim-lsp"] = {
     loaded = true,
     path = "/home/diogo/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
+  },
+  colorizer = {
+    loaded = true,
+    path = "/home/diogo/.local/share/nvim/site/pack/packer/start/colorizer",
+    url = "https://github.com/lilydjwg/colorizer"
   },
   ["gruvbox.nvim"] = {
     loaded = true,
@@ -149,10 +159,20 @@ _G.packer_plugins = {
     path = "/home/diogo/.local/share/nvim/site/pack/packer/start/undotree",
     url = "https://github.com/mbbill/undotree"
   },
+  ["vim-closetag"] = {
+    loaded = true,
+    path = "/home/diogo/.local/share/nvim/site/pack/packer/start/vim-closetag",
+    url = "https://github.com/alvan/vim-closetag"
+  },
   ["vim-fugitive"] = {
     loaded = true,
     path = "/home/diogo/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
+  },
+  ["vim-surround"] = {
+    loaded = true,
+    path = "/home/diogo/.local/share/nvim/site/pack/packer/start/vim-surround",
+    url = "https://github.com/tpope/vim-surround"
   }
 }
 

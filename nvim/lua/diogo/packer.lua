@@ -35,4 +35,8 @@ return require('packer').startup(function(use)
 	  {'L3MON4D3/LuaSnip'},     -- Required
   	  }
 	}
+    use ( 'lilydjwg/colorizer' )
+    use ( 'alvan/vim-closetag' )
+    use ('jiangmiao/auto-pairs' )
+    use ('tpope/vim-surround' )
 end)
