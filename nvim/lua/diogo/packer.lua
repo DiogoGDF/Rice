@@ -39,4 +39,9 @@ return require('packer').startup(function(use)
     use ( 'alvan/vim-closetag' )
     use ('jiangmiao/auto-pairs' )
     use ('tpope/vim-surround' )
+    -- use ( "junegunn/vim-emoji" )
+    use {
+          'nvim-lualine/lualine.nvim',
+            requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+    }
 end)

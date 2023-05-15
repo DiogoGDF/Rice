@@ -27,6 +27,7 @@ vim.keymap.set("n", "N", "Nzzzv")
 
 -- paste without copying new word with leader+p
 vim.keymap.set("x", "<leader>p", "\"_dP")
+vim.keymap.set("x", "P", "\"_dP")
 
 -- copy to clippboard with leader+y
 vim.keymap.set("n", "<leader>y", "\"+y")
@@ -72,4 +73,12 @@ vim.api.nvim_set_keymap('n', 'K', 'k', { silent = true })
 -- vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
 
 -- open in brave
-vim.keymap.set("n", "<leader>b", "<cmd>! brave %<CR><CR>")
+-- vim.keymap.set("n", "<leader>b", "<cmd>! brave %<CR><CR>")
+
+-- kill buffer
+vim.keymap.set("n", "<leader>bk", vim.cmd.bd)
+
+-- pandoc
+vim.keymap.set("n", "<leader>mp", "<cmd>silent !pandoc -o %:r.pdf %<CR>")
+vim.keymap.set("n", "<leader>mp", "<cmd>silent !pandoc -o %:r.docx %<CR>")
+vim.keymap.set("n", "<leader>mo", "<cmd>silent !xdg-open %:r.pdf &<CR>")

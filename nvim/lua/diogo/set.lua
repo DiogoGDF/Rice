@@ -15,17 +15,19 @@ vim.opt.backup = false
 vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 vim.opt.undofile = true
 
-vim.opt.hlsearch = false
+vim.opt.hlsearch = true
 vim.opt.incsearch = true
+vim.o.ignorecase = true
+vim.o.smartcase = true
 
 vim.opt.termguicolors = true
+-- vim.cmd [[colorshceme gruvbox]]
 
 vim.opt.scrolloff = 5
 vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
-vim.opt.termguicolors = true
 vim.o.encoding = "utf-8"
 
 
