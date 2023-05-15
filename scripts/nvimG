@@ -1,0 +1,3 @@
+#!/bin/bash
+rm -rf ~/Documents/Rice/nvim
+cp -r ~/.config/nvim ~/Documents/Rice/nvim
