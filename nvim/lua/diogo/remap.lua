@@ -101,3 +101,8 @@ vim.api.nvim_set_keymap('n', '<C-l>', '<C-w>>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<C-h>', '<C-w><', { noremap = true })
 vim.api.nvim_set_keymap('n', '<C-j>', '<C-w>+', { noremap = true })
 vim.api.nvim_set_keymap('n', '<C-k>', '<C-w>-', { noremap = true })
+
+-- insert texts
+vim.api.nvim_set_keymap('n', '<Leader>cd', [[:normal! i**\underline{Decisão:}**<Esc>]], { silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>ca', [[:normal! i**\underline{Ação tomada:}**<Esc>]], { silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>cA', [[:normal! i**\underline{Ações tomadas:}**<Esc>]], { silent = true })

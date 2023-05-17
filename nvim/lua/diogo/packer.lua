@@ -55,4 +55,5 @@ return require('packer').startup(function(use)
             }
         end
     }
+    use ( 'dhruvasagar/vim-table-mode' )
 end)
