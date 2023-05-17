@@ -69,16 +69,35 @@ vim.api.nvim_set_keymap('n', 'H', '-', { silent = true })
 vim.api.nvim_set_keymap('n', 'J', 'j', { silent = true })
 vim.api.nvim_set_keymap('n', 'K', 'k', { silent = true })
 
--- vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.dotfiles/nvim/.config/nvim/lua/theprimeagen/packer.lua<CR>");
--- vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
-
--- open in brave
--- vim.keymap.set("n", "<leader>b", "<cmd>! brave %<CR><CR>")
-
 -- kill buffer
 vim.keymap.set("n", "<leader>bk", vim.cmd.bd)
 
 -- pandoc
 vim.keymap.set("n", "<leader>mp", "<cmd>silent !pandoc -o %:r.pdf %<CR>")
-vim.keymap.set("n", "<leader>mp", "<cmd>silent !pandoc -o %:r.docx %<CR>")
+vim.keymap.set("n", "<leader>md", "<cmd>silent !pandoc -o %:r.docx %<CR>")
 vim.keymap.set("n", "<leader>mo", "<cmd>silent !xdg-open %:r.pdf &<CR>")
+
+-- Zen Mode
+vim.api.nvim_set_keymap('n', '<leader>zm', [[
+:lua require("zen-mode").toggle({window={width=.55}})
+:set nonumber
+:set norelativenumber
+:set signcolumn=no
+]], { noremap = true, silent = true })
+
+-- Spell Check
+vim.api.nvim_set_keymap('n', '<leader>sc', '<cmd>setlocal spell! spelllang=pt<CR>', { silent = true })
+vim.api.nvim_set_keymap('n', '<leader>Sc', '<cmd>setlocal spell! spelllang=en_us<CR>', { silent = true })
+
+-- Better Split Keybinds
+vim.api.nvim_set_keymap('n', '<leader>wv', ':vsplit %<CR>', {noremap = true})
+vim.api.nvim_set_keymap('n', '<leader>ws', ':split %<CR>', {noremap = true})
+vim.api.nvim_set_keymap('n', '<leader>wh', '<C-w>h', { noremap = true })
+vim.api.nvim_set_keymap('n', '<leader>wl', '<C-w>l', { noremap = true })
+vim.api.nvim_set_keymap('n', '<leader>wk', '<C-w>k', { noremap = true })
+vim.api.nvim_set_keymap('n', '<leader>wj', '<C-w>j', { noremap = true })
+vim.api.nvim_set_keymap('n', '<leader>wc', '<C-w>c', { noremap = true })
+vim.api.nvim_set_keymap('n', '<C-l>', '<C-w>>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<C-h>', '<C-w><', { noremap = true })
+vim.api.nvim_set_keymap('n', '<C-j>', '<C-w>+', { noremap = true })
+vim.api.nvim_set_keymap('n', '<C-k>', '<C-w>-', { noremap = true })

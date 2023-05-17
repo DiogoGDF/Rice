@@ -39,9 +39,20 @@ return require('packer').startup(function(use)
     use ( 'alvan/vim-closetag' )
     use ('jiangmiao/auto-pairs' )
     use ('tpope/vim-surround' )
-    -- use ( "junegunn/vim-emoji" )
     use {
           'nvim-lualine/lualine.nvim',
             requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+    }
+    use ( 'junegunn/goyo.vim' )
+    -- Lua
+    use {
+        "folke/zen-mode.nvim",
+        config = function()
+            require("zen-mode").setup {
+                -- your configuration comes here
+                -- or leave it empty to use the default settings
+                -- refer to the configuration section below
+            }
+        end
     }
 end)
