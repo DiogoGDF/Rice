@@ -1,6 +1,10 @@
 #!/bin/bash
 export SCRIPTPATH="$( cd "$(dirname "$0")" ; pwd -P )"
 
+if xrandr | grep "HDMI1 connected"; then
+	xrandr --output eDP1 --mode 1920x1080 --pos 0x1080 --rotate normal --output HDMI1 --primary --mode 1920x1080 --pos 0x0 --rotate normal & 
+fi
+
 # Down the last running theme
 if [ -f "/tmp/leftwm-theme-down" ]; then
     /tmp/leftwm-theme-down
@@ -8,9 +12,9 @@ if [ -f "/tmp/leftwm-theme-down" ]; then
 fi
 ln -s $SCRIPTPATH/down /tmp/leftwm-theme-down
 
+export PATH="$HOME/.local/bin:$PATH"
 # keybindings daemon
 #sxhkd -c ~/.config/leftwm/sxhkd/sxhkdrc &
-
 # diversity of apps to start
 nm-applet &
 #pamac-tray &
@@ -22,7 +26,7 @@ blueberry-tray &
 volumeicon &
 dunst &
 autostart &
-wallpaper &
+unclutter &
 #caffeine &
 #firefox &
 #thunar &
@@ -50,6 +54,7 @@ leftwm command "LoadTheme $SCRIPTPATH/theme.ron"
 #fi
 
 #mainbar
+sleep 1
 index=0
 monitors=($(polybar -m | sed s/:.*//))
 leftwm-state -q -n -t "$SCRIPTPATH"/sizes.liquid | sed -r '/^\s*$/d' | while read -r width x y
