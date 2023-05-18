@@ -24,7 +24,7 @@ vim.opt.termguicolors = true
 -- vim.cmd [[colorshceme gruvbox]]
 
 vim.opt.scrolloff = 5
-vim.opt.signcolumn = "yes"
+vim.opt.signcolumn = "no"
 vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50

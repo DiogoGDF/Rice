@@ -84,6 +84,10 @@ vim.api.nvim_set_keymap('n', '<leader>zm', [[
 :set norelativenumber
 :set signcolumn=no
 ]], { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>zc', '<cmd>lua require("zen-mode").toggle({window={width=.50}})<CR>', { silent = true })
+vim.api.nvim_set_keymap('n', '<leader>zby', '<cmd>set signcolumn=yes<CR>', { silent = true })
+vim.api.nvim_set_keymap('n', '<leader>zbn', '<cmd>set signcolumn=no<CR>', { silent = true })
+vim.api.nvim_set_keymap('n', '<leader>zn', '<cmd>set number relativenumber<CR>', { silent = true })
 
 -- Spell Check
 vim.api.nvim_set_keymap('n', '<leader>sc', '<cmd>setlocal spell! spelllang=pt<CR>', { silent = true })
