@@ -73,6 +73,7 @@
         (command: Execute, value: "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous", modifier: ["modkey", "Shift"], key: "n"),
         (command: Execute, value: "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause", modifier: ["modkey"], key: "m"),
         (command: Execute, value: "leftwm-command ToggleFloating", modifier: ["modkey"], key: "t"),
+        (command: Execute, value: "leftwm-command ToggleSticky", modifier: ["modkey"], key: "d"),
         (command: Execute, value: "killall leftwm", modifier: ["Control", "modkey", "Shift"], key: "l"),
         (command: Execute, value: "shutdown now", modifier: ["Control", "modkey", "Shift"], key: "x"),
         (command: Execute, value: "thunar", modifier: ["modkey", "Shift"], key: "f"),
