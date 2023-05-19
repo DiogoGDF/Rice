@@ -110,3 +110,6 @@ vim.api.nvim_set_keymap('n', '<C-k>', '<C-w>-', { noremap = true })
 vim.api.nvim_set_keymap('n', '<Leader>cd', [[:normal! i**\underline{Decisão:}**<Esc>]], { silent = true })
 vim.api.nvim_set_keymap('n', '<Leader>ca', [[:normal! i**\underline{Ação tomada:}**<Esc>]], { silent = true })
 vim.api.nvim_set_keymap('n', '<Leader>cA', [[:normal! i**\underline{Ações tomadas:}**<Esc>]], { silent = true })
+
+-- open terminal in directory of file
+vim.api.nvim_set_keymap('n', '<leader>tt', '<cmd>! alacritty &<CR>', { silent = true })
