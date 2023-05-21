@@ -69,6 +69,10 @@ vim.api.nvim_set_keymap('n', 'H', '-', { silent = true })
 vim.api.nvim_set_keymap('n', 'J', 'j', { silent = true })
 vim.api.nvim_set_keymap('n', 'K', 'k', { silent = true })
 
+-- Move vizual lines (wrapped)
+vim.api.nvim_set_keymap('n', 'j', 'gj', { silent = true })
+vim.api.nvim_set_keymap('n', 'k', 'gk', { silent = true })
+
 -- kill buffer
 vim.keymap.set("n", "<leader>bk", vim.cmd.bd)
 
