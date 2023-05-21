@@ -161,6 +161,10 @@
         (command: NextScratchPadWindow, value: "A2", modifier: ["modkey"], key: "comma"),
         (command: PrevScratchPadWindow, value: "A2", modifier: ["modkey"], key: "period"),
         (command: Execute, value: "gnome-screenshot -i", key: "Print"),
+        (command: SetMarginMultiplier, value: "0.0", modifier: ["modkey", "Shift", "Alt"], key: "l"),
+        (command: SetMarginMultiplier, value: "0.5", modifier: ["modkey", "Shift", "Alt"], key: "j"),
+        (command: SetMarginMultiplier, value: "1.5", modifier: ["modkey", "Shift", "Alt"], key: "k"),
+        (command: SetMarginMultiplier, value: "1.0", modifier: ["modkey", "Shift", "Alt"], key: "h"),
 
     ],
     state_path: None,
