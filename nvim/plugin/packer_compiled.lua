@@ -99,11 +99,6 @@ _G.packer_plugins = {
     path = "/home/diogo/.local/share/nvim/site/pack/packer/start/goyo.vim",
     url = "https://github.com/junegunn/goyo.vim"
   },
-  ["gruvbox.nvim"] = {
-    loaded = true,
-    path = "/home/diogo/.local/share/nvim/site/pack/packer/start/gruvbox.nvim",
-    url = "https://github.com/ellisonleao/gruvbox.nvim"
-  },
   harpoon = {
     loaded = true,
     path = "/home/diogo/.local/share/nvim/site/pack/packer/start/harpoon",
@@ -149,6 +144,11 @@ _G.packer_plugins = {
     needs_bufread = false,
     path = "/home/diogo/.local/share/nvim/site/pack/packer/opt/nvim-web-devicons",
     url = "https://github.com/nvim-tree/nvim-web-devicons"
+  },
+  ["onedark.nvim"] = {
+    loaded = true,
+    path = "/home/diogo/.local/share/nvim/site/pack/packer/start/onedark.nvim",
+    url = "https://github.com/navarasu/onedark.nvim"
   },
   ["packer.nvim"] = {
     loaded = true,
