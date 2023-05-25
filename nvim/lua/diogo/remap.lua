@@ -12,6 +12,7 @@ vim.keymap.set("n", "<leader>fq", vim.cmd.q)
 
 -- SO
 vim.keymap.set("n", "<leader>so", vim.cmd.so)
+vim.keymap.set("n", "<leader>hrr", vim.cmd.PackerSync)
 
 -- move (Shift+j or Shift+k while in visual mode)
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
@@ -78,8 +79,9 @@ vim.keymap.set("n", "<leader>bk", vim.cmd.bd)
 
 -- pandoc
 vim.keymap.set("n", "<leader>mp", "<cmd>silent !pandoc -o %:r.pdf %<CR>")
-vim.keymap.set("n", "<leader>md", "<cmd>silent !pandoc -o %:r.docx %<CR>")
+vim.keymap.set("n", "<leader>mdx", "<cmd>silent !pandoc -o %:r.docx %<CR>")
 vim.keymap.set("n", "<leader>mo", "<cmd>silent !xdg-open %:r.pdf &<CR>")
+vim.keymap.set("n", "<leader>mds", "<cmd>silent set syntax=markdown<CR>")
 
 -- Zen Mode
 vim.api.nvim_set_keymap('n', '<leader>zm', [[
