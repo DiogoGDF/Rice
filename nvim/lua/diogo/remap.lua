@@ -59,7 +59,8 @@ vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
 vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
 -- edit current word in all file
-vim.keymap.set("n", "<leader>sw", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+vim.keymap.set("n", "<leader>swa", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+vim.keymap.set("n", "<leader>swc", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gc<Left><Left><Left>]])
 
 -- make file executable
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
@@ -118,4 +119,7 @@ vim.api.nvim_set_keymap('n', '<Leader>ca', [[:normal! i**\underline{Ação tomad
 vim.api.nvim_set_keymap('n', '<Leader>cA', [[:normal! i**\underline{Ações tomadas:}**<Esc>]], { silent = true })
 
 -- open terminal in directory of file
-vim.api.nvim_set_keymap('n', '<leader>tt', '<cmd>! alacritty &<CR>', { silent = true })
+vim.api.nvim_set_keymap('n', '<leader>to', '<cmd>! alacritty &<CR>', { silent = true })
+
+-- copy path to clippboard
+vim.api.nvim_set_keymap('n', '<leader>cp', '<cmd>redir @+ | pwd | redir END<CR>', { silent = true })
