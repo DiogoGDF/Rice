@@ -4,11 +4,10 @@ vim.g.mapleader = " "
 -- open file Explorer
 vim.keymap.set("n", "<leader>e", vim.cmd.Ex)
 
--- File Save
+-- File Save, Quit, save & quit
 vim.keymap.set("n", "<leader>fs", vim.cmd.w)
-
--- File Quit
 vim.keymap.set("n", "<leader>fq", vim.cmd.q)
+vim.keymap.set("n", "<leader>wq", vim.cmd.wq)
 
 -- SO
 vim.keymap.set("n", "<leader>so", vim.cmd.so)
